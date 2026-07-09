@@ -1,0 +1,13 @@
+dataset,model,accuracy,f1,type
+UNSW-NB15,Logistic Regression,93.23,0.9522,Centralized
+UNSW-NB15,Random Forest,96.07,0.9714,Centralized
+UNSW-NB15,DNN,93.35,0.9498,Centralized
+CICIDS2017,Logistic Regression,96.69,0.8937,Centralized
+CICIDS2017,Random Forest,99.9,0.9968,Centralized
+CICIDS2017,DNN,98.4,0.9473,Centralized
+CICIDS2018,Logistic Regression,99.89,0.9962,Centralized
+CICIDS2018,Random Forest,100.0,1.0,Centralized
+CICIDS2018,DNN,99.98,0.9994,Centralized
+UNSW-NB15,Logistic Regression,84.33,,Federated
+UNSW-NB15,Random Forest,95.58,,Federated
+UNSW-NB15,DNN,93.91,,Federated
