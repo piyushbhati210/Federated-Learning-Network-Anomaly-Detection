@@ -1,0 +1,2 @@
+model,num_clients,trees_per_client,total_trees,accuracy,precision,recall,f1
+Federated Random Forest,4,25,100,0.9558299352704668,0.9569276121847363,0.9791780133227198,0.9679249580684571
