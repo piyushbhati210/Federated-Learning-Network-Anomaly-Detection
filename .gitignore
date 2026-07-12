@@ -1,0 +1,8 @@
+
+data/
+
+__pycache__/
+
+*.pyc
+
+FL_Anomaly_Detection/models/
