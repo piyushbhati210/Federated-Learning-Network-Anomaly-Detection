@@ -1,0 +1,2 @@
+dataset,model,num_clients,trees_per_client,total_trees,accuracy,precision,recall,f1
+cicids2017,Federated Random Forest,4,25,100,0.9988097479624499,0.996902503313428,0.9951981684654952,0.9960496068205659
