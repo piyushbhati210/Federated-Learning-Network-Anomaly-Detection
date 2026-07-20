@@ -86,6 +86,19 @@ def get_evaluate_fn():
               f"Round {server_round} → "
               f"Loss: {loss:.4f} | Accuracy: {accuracy*100:.2f}%\n")
 
+        # ── Log this round to CSV (round-by-round history) ────
+        log_path = f"../results/metrics/fedavg_{MODEL_NAME.lower()}_{DATASET}_rounds.csv"
+        os.makedirs(os.path.dirname(log_path), exist_ok=True)
+        row = pd.DataFrame([{
+            "dataset": DATASET,
+            "model": MODEL_NAME,
+            "round": server_round,
+            "loss": loss,
+            "accuracy": accuracy
+        }])
+        write_header = not os.path.exists(log_path)
+        row.to_csv(log_path, mode='a', header=write_header, index=False)
+
         if server_round == NUM_ROUNDS:
             os.makedirs(os.path.dirname(SAVE_PATH), exist_ok=True)
             torch.save(model.state_dict(), SAVE_PATH)
